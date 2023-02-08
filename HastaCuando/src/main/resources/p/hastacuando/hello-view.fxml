@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="p.hastacuando.HelloController">
+   <Label fx:id="lblTipo" layoutX="359.0" layoutY="6.0" text="Todas las Canciones" />
+    <TableView fx:id="tableViewCanciones" layoutX="238.0" layoutY="28.0" prefHeight="348.0" prefWidth="348.0">
+      <columns>
+          <TableColumn fx:id="colCanciones" prefWidth="347.0" text="Canciones" />
+      </columns>
+    </TableView>
+    <Label alignment="CENTER" contentDisplay="BOTTOM" layoutX="41.0" layoutY="14.0" prefHeight="43.0" prefWidth="158.0" text="Añadir Cancion">
+      <font>
+         <Font size="18.0" />
+      </font></Label>
+   <CheckBox fx:id="chcPop" layoutX="23.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#popChc" text="Pop" />
+   <CheckBox fx:id="chcRock" layoutX="96.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#RockChc" text="Rock" />
+   <CheckBox fx:id="chcSalsa" layoutX="168.0" layoutY="57.0" mnemonicParsing="false" onMouseClicked="#SalsaChc" text="Salsa" />
+   <Pane fx:id="panePop" layoutX="20.0" layoutY="86.0" prefHeight="255.0" prefWidth="200.0" visible="false">
+      <TextField fx:id="txtTimeDurationPop" layoutX="26.0" layoutY="32.0" promptText="Introduzca duracion" />
+      <Label layoutX="46.0" layoutY="6.0" text="Tiempo de Duracion" />
+      <Label layoutX="86.0" layoutY="67.0" text="Autor" />
+      <TextField fx:id="txtAutorPop" layoutX="27.0" layoutY="93.0" promptText="Introduzca autor" />
+      <TextField fx:id="txtAñoPop" layoutX="26.0" layoutY="153.0" promptText="Introduzca año" />
+      <Label layoutX="83.0" layoutY="184.0" text="Sexo" />
+      <Label layoutX="85.0" layoutY="128.0" text="Año" />
+      <ChoiceBox fx:id="chcSexo" layoutX="26.0" layoutY="208.0" prefWidth="150.0" />
+   </Pane>
+   <Pane fx:id="paneRock" layoutX="20.0" layoutY="86.0" prefHeight="255.0" prefWidth="200.0" visible="false">
+      <TextField fx:id="txtTimeDurationRock" layoutX="26.0" layoutY="32.0" promptText="Introduzca duracion" />
+      <Label layoutX="46.0" layoutY="6.0" text="Tiempo de Duracion" />
+      <Label layoutX="86.0" layoutY="67.0" text="Autor" />
+      <TextField fx:id="txtAutorRock" layoutX="27.0" layoutY="93.0" promptText="Introduzca autor" />
+      <TextField fx:id="txtAñoRock" layoutX="26.0" layoutY="153.0" promptText="Introduzca año" />
+      <Label layoutX="85.0" layoutY="128.0" text="Año" />
+      <ChoiceBox fx:id="chcNacional" layoutX="26.0" layoutY="208.0" prefWidth="150.0" />
+      <Label layoutX="50.0" layoutY="184.0" text="Nacional o Extranjero" />
+   </Pane>
+   <Pane fx:id="paneSalsa" layoutX="20.0" layoutY="86.0" prefHeight="255.0" prefWidth="200.0" visible="false">
+      <TextField fx:id="txtTimeDurationSalsa" layoutX="26.0" layoutY="32.0" promptText="Introduzca duracion" />
+      <Label layoutX="46.0" layoutY="6.0" text="Tiempo de Duracion" />
+      <Label layoutX="86.0" layoutY="67.0" text="Autor" />
+      <TextField fx:id="txtAutorSalsa" layoutX="27.0" layoutY="93.0" promptText="Introduzca autor" />
+      <TextField fx:id="txtAñoSalsa" layoutX="26.0" layoutY="153.0" promptText="Introduzca año" />
+      <Label layoutX="85.0" layoutY="128.0" text="Año" />
+      <ChoiceBox fx:id="chcGrupo" layoutX="26.0" layoutY="208.0" prefWidth="150.0" />
+      <Label layoutX="59.0" layoutY="188.0" text="Grupo o Solista" />
+   </Pane>
+   <Button fx:id="btnAgregar" layoutX="12.0" layoutY="344.0" mnemonicParsing="false" onMousePressed="#btnAgregar" prefHeight="32.0" prefWidth="65.0" text="Agregar" />
+   <Button fx:id="btnMostrar" layoutX="88.0" layoutY="344.0" mnemonicParsing="false" onMousePressed="#btnMostrar" prefHeight="32.0" prefWidth="65.0" text="Mostrar" />
+   <TableView fx:id="tableViewPop" layoutX="238.0" layoutY="28.0" prefHeight="348.0" prefWidth="348.0" visible="false">
+      <columns>
+         <TableColumn fx:id="colAutorPop" prefWidth="158.0" text="Autor" />
+         <TableColumn fx:id="colAñoPop" prefWidth="39.0" text="Año" />
+         <TableColumn fx:id="colTiempoPop" prefWidth="62.0" text="Tiempo" />
+         <TableColumn fx:id="colSexo" prefWidth="88.0" text="Sexo" />
+      </columns>
+   </TableView>
+   <TableView fx:id="tableViewRock" layoutX="238.0" layoutY="28.0" prefHeight="348.0" prefWidth="348.0" visible="false">
+      <columns>
+         <TableColumn fx:id="colAutorRock" prefWidth="72.0" text="Autor" />
+         <TableColumn fx:id="colAñoRock" prefWidth="37.0" text="Año" />
+         <TableColumn fx:id="colTiempoRock" prefWidth="112.0" text="Tiempo" />
+         <TableColumn fx:id="colNacional" prefWidth="126.0" text="Nacional o Extranjero" />
+      </columns>
+   </TableView>
+   <TableView fx:id="tableViewSalsa" layoutX="238.0" layoutY="28.0" prefHeight="348.0" prefWidth="348.0" visible="false">
+      <columns>
+         <TableColumn fx:id="colAutorSalsa" prefWidth="72.0" text="Autor" />
+         <TableColumn fx:id="colAñoSalsa" prefWidth="37.0" text="Año" />
+         <TableColumn fx:id="colTiempoSalsa" prefWidth="112.0" text="Tiempo" />
+         <TableColumn fx:id="colGrupo" prefWidth="126.0" text="Grupo o Solista" />
+      </columns>
+   </TableView>
+   <Button fx:id="btnAtras" layoutX="160.0" layoutY="333.0" mnemonicParsing="false" onMousePressed="#onAtras" prefHeight="43.0" prefWidth="65.0" text="Lista de &#10;Canciones" />
+</AnchorPane>

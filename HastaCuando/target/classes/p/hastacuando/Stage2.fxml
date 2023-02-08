@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="p.hastacuando.Stage2Controller">
+    <TableView fx:id="tableViewMp3" layoutX="300.0" layoutY="19.0" prefHeight="366.0" prefWidth="290.0">
+      <columns>
+          <TableColumn fx:id="colNombre" prefWidth="65.0" text="Nombre" />
+          <TableColumn fx:id="colInterprete" prefWidth="69.0" text="Interprete " />
+          <TableColumn fx:id="colTitulo" prefWidth="64.0" text="Titulo" />
+      </columns>
+    </TableView>
+    <TextField fx:id="txtNombre" layoutX="75.0" layoutY="55.0" />
+    <TextField fx:id="txtInterprete" layoutX="75.0" layoutY="120.0" />
+    <TextField fx:id="txtTitulo" layoutX="75.0" layoutY="188.0" />
+    <Label layoutX="128.0" layoutY="27.0" text="Nombre" />
+    <Label layoutX="125.0" layoutY="95.0" text="Interprete" />
+    <Label layoutX="135.0" layoutY="163.0" text="Titulo" />
+    <Button fx:id="btnAgregar" layoutX="124.0" layoutY="251.0" mnemonicParsing="false" onAction="#onAgregar" text="Agregar" />
+</AnchorPane>
